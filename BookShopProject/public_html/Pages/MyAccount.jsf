@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head>
+        
+        <link rel="stylesheet" href="../Css/style.css"/>
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/></h:head>
+        <h:body>
+            <ui:composition template="/Template/Template.jsf">
+               <ui:define name="content">
+                <div class="container">
+               <h1>My Account</h1>
+                    <h:form>
+                       <div class="input-field">
+                                 <h:outputLabel value="Welcome: "/>
+                                 <h:outputText value=""/><br></br>
+                                 <h:outputLabel value="Email: "/>
+                                 <h:outputText value="#{LoginBean.userName}"/>
+                                 
+                            </div>
+                    </h:form>
+                    </div>
+              </ui:define>
+             </ui:composition>
+        </h:body>
+    </html>
+</f:view>

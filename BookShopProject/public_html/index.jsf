@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" 
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head>
+              <meta charset="utf-8"/>
+                <title>Book Shop</title>
+                <link rel="stylesheet" href="Css/normalize.css"/>
+                <link rel="stylesheet" href="Css/style.css"/>
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        </h:head>
+        <h:body>
+         <ui:composition template="/Template/Template.jsf">
+          <ui:define name="content">
+        
+                    
+        
+        
+                 <div class="desc">
+                     
+                     <h2>Book Shop Best seller.</h2>
+                     <p>The Perfect Gift: Bookshop Gift Cards Support Local Bookstores! A Better Way to Buy Books Online.</p>
+                 </div>
+        
+        <div class="free"> <div class="container"></div></div>
+        
+        
+        
+        
+
+        <div class="container">
+                    <div class="row"> 
+                        <div class="card">  
+                            <div class="card-header">
+                            
+                                <img src="imgs/formula.jpg" alt="ch logo"/>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="card">
+                            <div class="card-header">
+                               
+                                <img src="imgs/action-thriller-book-cover-design-template-3675ae3e3ac7ee095fc793ab61b812cc_screen.jpg" alt="ch logo"/>
+                                 <div class="card-body">
+                                    <button>Add To Cart</button>
+                                 </div>
+                                </div>
+                            </div>
+                        
+
+                         <div class="card">
+                            <div class="card-header">
+                                <img src="imgs/blue-minimal-novel-cover-6e355184dc3545c6bec6a9f618f83e0d.webp" alt="ch logo"/>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="card">
+                            <div class="card-header">
+                                <img src="imgs/contemporary-fiction-night-time-book-cover-design-template-1be47835c3058eb42211574e0c4ed8bf_screen.jpg" alt="ch logo"/>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="card">
+                            <div class="card-header">
+                                <img src="imgs/download.jpeg" alt="ch logo"/>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ====================================== -->
+                         <div class="card">
+                            <div class="card-header">
+                                <img src="imgs/image.png" alt="ch logo"/>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="card">
+                            <div class="card-header">
+                                <img src="imgs/media_178ebed46ae02d6f3284c7886e9b28c5bb9046a02.jpeg" alt="ch logo"></img>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="card">
+                            <div class="card-header">
+                              <img src="imgs/giuig.jpeg" alt="ch logo"></img>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="card">
+                            <div class="card-header">
+                               <img src="imgs/ladybird.jpeg" alt="ch logo"></img>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="card">
+                            <div class="card-header">
+                               <img src="imgs/yuyfytfyf.jpeg" alt="nibi"></img>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        </div>
+
+        </div>
+        
+        
+       </ui:define>
+       </ui:composition>
+
+        </h:body>
+    </html>
+</f:view>

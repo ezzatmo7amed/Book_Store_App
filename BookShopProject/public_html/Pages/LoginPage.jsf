@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head>
+               <meta charset="utf-8"/>
+                <title> Registration Page </title>
+                <link rel="stylesheet" href="../htmlPages/../css2/StyleRegistration.css"/>
+                <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+        </h:head>
+        <h:body>
+           
+            <div class="container">
+            
+            <a href="../index.jsf">Back To Site</a>
+            
+            <header>Login</header>
+            
+             <h:form>
+                <div class="form first">
+                    <div class="details personal">
+                        
+                        
+                        <div class="fields">
+                              <div class="input-field">
+                                 <h:outputLabel value="User Name"/>
+                                <h:inputText id="user_name" value="#{LoginBean.userName}" required="true" />
+                         
+                            </div>
+                 
+                            <div class="input-field">
+                                <h:outputLabel value="Password"/>
+                                <h:inputText id="password" value="#{LoginBean.password}" required="true" />
+                              
+                            </div>
+                            
+                     
+                        </div>
+                             <h:commandButton value="Login" action="#{LoginBean.checkLogin}"/>
+                        </div>
+                         <h5>Dont Have an account yet ? </h5><a href="RegisterationPage.jsf">Registration Page</a>
+                </div>
+             </h:form>
+        </div>
+        </h:body>
+    </html>
+</f:view>

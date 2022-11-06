@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head></h:head>
+        <h:body>
+             <ui:composition template="/Template/Template.jsf">
+               <ui:define name="content">
+                <div class="free"> <div class="container"></div></div>
+        
+         <div class="container">
+                     
+               <h:form>        
+               <h:dataTable var="p" width="100%"  border="1" value="#{StoreBean.productCartList}">
+                  <h:column>
+                            <f:facet name="header"><h:outputText value="Book Name"/> </f:facet>
+                                           <h:outputText value="#{p.product.book_Name}"/>
+                              
+                  </h:column>
+                 
+                  <h:column>
+                  
+                   
+                            <f:facet name="header"><h:outputText value="Price"/>  </f:facet>
+                                <h:outputText value="#{p.product.book_Price}"/>
+                              
+                       
+                  </h:column>
+                   <h:column>
+                            <f:facet name="header"><h:outputText value="Quantity"/></f:facet>
+                                <h:outputText value="#{p.quantity}"/>
+                  </h:column>
+                   <h:column>
+                        
+                 <f:facet name="header"><h:outputText value="Total Price"/> </f:facet>
+                                           <h:outputText value="#{p.product.book_Price * p.quantity}"/>
+                  </h:column>
+                  <h:column> 
+                    
+                     <h:commandButton value="Remove" action="#{StoreBean.removeProduct}"/>
+                             
+                   </h:column>
+               </h:dataTable>
+               <h2>Total Sum = #{StoreBean.sumCart()}</h2>
+                            <h:outputText value=""/>
+                        </h:form>
+        </div>
+               </ui:define>
+             </ui:composition>
+        </h:body>
+    </html>
+</f:view>

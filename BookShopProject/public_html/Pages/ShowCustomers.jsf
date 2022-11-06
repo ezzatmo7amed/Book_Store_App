@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head></h:head>
+        <h:body>
+           <ui:composition template="../Template/Template.jsf">
+              <ui:define name="content">
+        <div class="container">
+              <h:form>
+                        <h:dataTable var="cust" width="100%" border="1" value="#{RegisterBean.customerList}">
+                            <h:column>
+                              <f:facet name="header">
+                                 <h:outputText value="Customer Id"/>
+                              </f:facet>
+                                <h:outputText value="#{cust.user_id}"/>
+                                </h:column>
+                            <h:column>
+                            <f:facet name="header">
+                                    <h:outputText value="First Name"/>
+                                            </f:facet>
+                                <h:outputText value="#{cust.firstName}"/>
+                                </h:column>
+                            <h:column>
+                            <f:facet name="header">
+                                 <h:outputText value="Last Name"/>
+                                            </f:facet>
+                                <h:outputText value="#{cust.lastName}"/>
+                                </h:column>
+                            <h:column>
+                            
+                             <f:facet name="header">
+                                   <h:outputText value="Phone Number"/>
+                                            </f:facet>
+                                <h:outputText value="#{cust.phoneNumber}"/>
+                           </h:column> 
+                            <h:column>
+                               <f:facet name="header">
+                                   <h:outputText value="Email"/>
+                                            </f:facet>
+                                <h:outputText value="#{cust.email}"/>
+                            </h:column>
+                            
+                        </h:dataTable>
+                    </h:form>
+        </div>
+              </ui:define>
+             </ui:composition>
+        </h:body>
+    </html>
+</f:view>

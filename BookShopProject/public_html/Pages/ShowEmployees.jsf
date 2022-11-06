@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head></h:head>
+        <h:body>
+           <ui:composition template="../Template/Template.jsf">
+              <ui:define name="content">
+        <div class="container">
+              <h:form>
+                        <h:dataTable var="emp" width="100%" border="1" value="#{EmployeesBean.empList}">
+                            <h:column>
+                              <f:facet name="header">
+                                 <h:outputText value="Employee Id"/>
+                              </f:facet>
+                                <h:outputText value="#{emp.employee_Id}"/>
+                                </h:column>
+                            <h:column>
+                            <f:facet name="header">
+                                    <h:outputText value="First Name"/>
+                                            </f:facet>
+                                <h:outputText value="#{emp.first_Name}"/>
+                                </h:column>
+                            <h:column>
+                            <f:facet name="header">
+                                 <h:outputText value="Last Name"/>
+                                            </f:facet>
+                                <h:outputText value="#{emp.last_Name}"/>
+                                </h:column>
+                            <h:column>
+                            
+                             <f:facet name="header">
+                                   <h:outputText value="Address"/>
+                                            </f:facet>
+                                <h:outputText value="#{emp.address}"/>
+                           </h:column> 
+                            <h:column>
+                               <f:facet name="header">
+                                   <h:outputText value="Hire Date"/>
+                                            </f:facet>
+                                <h:outputText value="#{emp.hireDate}"/>
+                            </h:column>
+                            <h:column>
+                              <f:facet name="header">
+                                   <h:outputLabel value="Salary"/>
+                                            </f:facet>
+                                <h:outputText value="#{emp.salary}"/>
+                            </h:column>
+                            <h:column>
+                               <f:facet name="header">
+                                   <h:outputText value="Email"/>
+                                            </f:facet>
+                                <h:outputText value="#{emp.email}"/>
+                            </h:column>
+                            <h:column>
+                               <f:facet name="header">
+                                   <h:outputText value="User Name"/>
+                                            </f:facet>
+                                <h:outputText value="#{emp.user_Name}"/>
+                            </h:column>
+                            <h:column>
+                              <f:facet name="header">
+                                   <h:outputText value="Password"/>
+                                            </f:facet>
+                                <h:outputText value="#{emp.password}"/>
+                            </h:column>
+                        </h:dataTable>
+                    </h:form>
+        </div>
+              </ui:define>
+             </ui:composition>
+        </h:body>
+    </html>
+</f:view>

@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head>
+              <meta charset="utf-8"/>
+                <title>Book Shop</title>
+                <link rel="stylesheet" href="../Css/normalize.css"/>
+                <link rel="stylesheet" href="../Css/style.css"/>
+                
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+                <script src="https://kit.fontawesome.com/3629a32de5.js" crossorigin="anonymous"></script>
+        </h:head>
+        <h:body>
+            <h:form>
+             <div class="header1">
+
+                      <div class="n-bar1">
+                            <div class="container">
+                                 <h2><span>Book</span> <span class="shop">shop</span></h2>
+                            <ul>
+                                <li> <h:commandLink value="My Account" action="myaccount" rendered="#{LoginBean.showItem}"/> </li>
+                                <li><h:commandLink value="Login" action="login" rendered="#{!LoginBean.showItem}"/></li>
+                                <li><h:commandLink value="Cart" action="cartPage" rendered="#{LoginBean.showItem}"/></li>
+                                
+                                <li><h:commandLink value="Logout" action="#{LoginBean.logout}" rendered="#{LoginBean.showItem}"/></li>
+                                <li><i class="fa-thin fa-cart-arrow-down"></i></li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+        
+                    <div class="header">
+
+                      <div class="n-bar">
+                            <div class="container">
+                                <div class="search-input">
+                                <h:inputText id="search" value=""/>
+                                
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+       
+        
+                     <div class="header">
+
+                      <div class="n-bar">
+                            <div class="container">
+
+                                  
+                         <ul>
+                                <li><a href="../index2.jsf" target="_self">Home</a></li>
+                                <li><a href="../Pages/Kids.jsf" target="_self">Kids</a>
+                                    
+                             
+                                </li>
+                                <li><a href="../Pages/Fiction.jsf" target="_self">Fiction</a></li>
+                                <li><a href="../Pages/Science.jsf" target="_self">Science - Technology +</a>
+                             
+                            
+                             
+                                </li>
+                              
+                          </ul>
+                      </div>
+                      </div>
+                    </div>
+        
+                    
+        </h:form>
+        
+        <ui:insert name="content">
+            </ui:insert>
+
+
+        <div class="free"> <div class="container"></div></div>
+        
+        
+        
+          <div class="footer">
+               <div class="container">
+                   <div class="row-footer">
+                       <div class="footer-col">
+                           <h4>ABOUT</h4>
+                           <ul>
+                              <li><a href="#">Contact</a></li>
+                               <li><a href="#">Offers</a></li>
+                               <li><a href="#">Gift Cards</a></li>
+                           </ul>
+                       </div>
+                       
+                  
+                       
+                        <div class="footer-col">
+                           <h4>SHOP BY CATEGORY</h4>
+                           <ul>
+                              <li><a href="#"></a></li>
+                               <li><a href="#">Books</a></li>
+                               <li><a href="#">Fiction</a></li>
+                               <li><a href="#">Kids</a></li>
+                               <li><a href="#">Science</a></li>
+                               <li><a href="#">Programming</a></li>
+                           </ul>
+                       </div>
+                       
+                        <div class="footer-col">
+                           <h4>follow us</h4>
+                           
+                             <div class="social-links">
+                                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                  <a href="#"><i class="fab fa-twitter"></i></a>
+                                  <a href="#"><i class="fab fa-instagram"></i></a>
+                                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                                
+                       </div>
+                          
+                   </div>
+                         
+               </div>
+          </div>
+          
+            
+                   <div class="footer-end">
+                           <div class="container">
+                              <span>Copyright Book Shop 2022</span>
+                              
+                          </div>
+                    </div>
+        
+        </h:body>
+    </html>
+</f:view>

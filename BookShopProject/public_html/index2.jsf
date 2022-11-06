@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" 
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head>
+              <meta charset="utf-8"/>
+                <title>Book Shop</title>
+                <link rel="stylesheet" href="Css/normalize.css"/>
+                <link rel="stylesheet" href="Css/style.css"/>
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        </h:head>
+        <h:body>
+         <ui:composition template="/Template/Template.jsf">
+          <ui:define name="content">
+        
+                    
+        
+        
+                 <div class="desc">
+                     
+                     <h2>Book Shop Best seller.</h2>
+                     <p>The Perfect Gift: Bookshop Gift Cards Support Local Bookstores! A Better Way to Buy Books Online.</p>
+                 </div>
+        
+        <div class="free"> <div class="container"></div></div>
+        
+         <div class="container">
+                    <div class="row"> 
+               <h:form>        
+               <h:dataTable var="p"  value="#{StoreBean.productList}">
+                  <h:column>
+                      <div class="card">  
+                            <div class="card-header">
+                             <h:graphicImage url="imgs/#{p.book_img}" alt="book" height="200"
+                                                            width="150"/>
+                                            
+                                 <div class="card-body"> </div>
+                            </div>
+                        </div>
+                  </h:column>
+                  <h:column>
+                        <div class="card">
+                            <div class="card-header">
+                            <f:facet name="header"> <h:outputText value="Book Description"/> </f:facet>
+                                           <h:outputText value="#{p.book_Description}"/>
+                                </div>
+                            </div>
+                  </h:column>
+                  <h:column>
+                  
+                      <div class="card">
+                            <div class="card-header">
+                            <f:facet name="header"> <h:outputText value="Price"/> </f:facet>
+                                     <h:outputText value="#{p.book_Price}"/>
+                              
+                            </div>
+                        </div>
+                  </h:column>
+                 
+                  <h:column>
+                       <div class="card">
+                            <div class="card-header">
+                         <h:commandButton value="Add To Cart" action="#{StoreBean.addProductToCart(p)}"/>
+                              
+                            </div>
+                        </div>
+                   </h:column>
+               </h:dataTable>
+              
+
+          </h:form>
+
+                        
+
+                        <!-- ====================================== 
+                         <div class="card">
+                            <div class="card-header">
+                                <img src="imgs/image.png" alt="ch logo"/>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="card">
+                            <div class="card-header">
+                                <img src="imgs/media_178ebed46ae02d6f3284c7886e9b28c5bb9046a02.jpeg" alt="ch logo"></img>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="card">
+                            <div class="card-header">
+                              <img src="imgs/giuig.jpeg" alt="ch logo"></img>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="card">
+                            <div class="card-header">
+                               <img src="imgs/ladybird.jpeg" alt="ch logo"></img>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="card">
+                            <div class="card-header">
+                               <img src="imgs/yuyfytfyf.jpeg" alt="nibi"></img>
+                                <div class="card-body">
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+ -->
+                        </div>
+
+        </div>
+         
+        
+       </ui:define>
+       </ui:composition>
+
+        </h:body>
+    </html>
+</f:view>

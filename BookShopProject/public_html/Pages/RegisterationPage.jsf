@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head>
+                <meta charset="utf-8"/>
+                <title> Registration Page </title>
+                <link rel="stylesheet" href="../htmlPages/../css2/StyleRegistration.css"/>
+                <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+        </h:head>
+        <h:body>
+            
+          
+            <div class="container">
+            
+            <a href="../index.jsf">Back To Site</a>
+            
+            <header>Registration</header>
+            
+            
+                     <h:form> 
+                    <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+                        <div class="fields">
+                            
+                            <div class="input-field">
+                                
+                                 <h:outputLabel value="First Name"/>
+                                <h:inputText id="first_name" value="#{RegisterBean.firstName}" required="true" />
+                                </div>
+                            
+                            <div class="input-field">
+                               
+                                 <h:outputLabel value="Last Name"/>
+                                <h:inputText id="last_name" value="#{RegisterBean.lastName}" required="true" />
+                              
+                            </div>
+                            
+                            <div class="input-field">
+                                <h:outputLabel value="Phone Number"/>
+                                <h:inputText id="phone_number" value="#{RegisterBean.phoneNumber}" required="true" />
+                              
+                            </div>
+                            
+                            
+                              <div class="input-field">
+                                 <h:outputLabel value="Email"/>
+                                <h:inputText id="Email" value="#{RegisterBean.email}" required="true" />
+                              
+                            </div>
+                            
+                           
+                            
+                            <div class="input-field">
+                               
+                                 <h:outputLabel value="Password"/>
+                                <h:inputText id="password" value="#{RegisterBean.password}" required="true" />
+                              
+                            </div>
+                            
+                             <div class="input-field">
+                                <h:outputLabel value="Confirm Password"/>
+                                <h:inputText id="confirm_password" value="#{RegisterBean.confirmPassword}" required="true" />
+                              
+                            </div>
+                           
+                            
+                        </div>
+                        <h:commandButton  value="Register" action="#{RegisterBean.registerUser}"/>
+                        </div>
+                </div>
+            </h:form>
+        </div>
+        
+        </h:body>
+    </html>
+</f:view>

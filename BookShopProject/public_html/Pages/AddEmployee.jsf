@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head>
+          <link rel="stylesheet" href="../htmlPages/../css2/StyleRegistration.css"/>
+        </h:head>
+        <h:body>
+            
+             <ui:composition template="../Template/Template.jsf">
+              <ui:define name="content">
+            <div class="container">
+            
+          
+            
+            <header>Adding New Employee </header>
+            
+            
+                     <h:form> 
+                    <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+                        <div class="fields">
+                            
+                            <div class="input-field">
+                                
+                                 <h:outputLabel value="First Name"/>
+                                <h:inputText id="first_name" value="#{EmployeesBean.first_Name}" required="true" />
+                                </div>
+                            
+                            <div class="input-field">
+                               
+                                 <h:outputLabel value="Last Name"/>
+                                <h:inputText id="last_name" value="#{EmployeesBean.last_Name}" required="true" />
+                              
+                            </div>
+                            <div class="input-field">                             
+                                 <h:outputLabel value="Address"/>
+                                <h:inputText id="address" value="#{EmployeesBean.address}" required="true" />                            
+                            </div>
+                            <div class="input-field">
+                                 <h:outputLabel value="Hire Date"/>
+                                <h:inputText id="hire_date" value="#{EmployeesBean.hireDate}" required="true" />                            
+                            </div>
+                            <div class="input-field">
+                                <h:outputLabel value="Salary"/>
+                                <h:inputText id="salary" value="#{EmployeesBean.salary}" required="true" />                            
+                            </div>
+                           <div class="input-field">
+                                 <h:outputLabel value="Email"/>
+                                <h:inputText id="Email" value="#{EmployeesBean.email}" required="true" />                              
+                            </div>
+                            <div class="input-field">
+                                <h:outputLabel value="User Name"/>
+                                <h:inputText id="user_name" value="#{EmployeesBean.user_Name}" required="true" />
+                              
+                            </div>
+                            <div class="input-field">
+                               
+                                 <h:outputLabel value="Password"/>
+                                <h:inputText id="password" value="#{EmployeesBean.password}" required="true" />
+                              
+                            </div>
+                            
+                        </div>
+                           <h:commandButton  value="Add" action="#{EmployeesBean.addEmployee}"/>
+                    </div>
+                </div>
+            </h:form>
+        </div>
+        </ui:define>
+        </ui:composition>
+        </h:body>
+    </html>
+</f:view>
